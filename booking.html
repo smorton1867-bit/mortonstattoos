@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Appointment - Morton's Tattoos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    background:black;
+    color:white;
+    font-family:Arial, sans-serif;
+    padding:20px;
+    line-height:1.6;
+}
+h1, h2, h3 { text-align:center; }
+form {
+    max-width:600px;
+    margin:auto;
+    background:#111;
+    padding:20px;
+    border:1px solid white;
+}
+input, select, textarea {
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    background:#111;
+    color:white;
+    border:1px solid white;
+}
+button {
+    padding:15px;
+    background:white;
+    color:black;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    width:100%;
+    margin-top:10px;
+}
+button:hover {
+    background:#ccc;
+}
+.style-options {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+}
+p.note {
+    color:#ccc;
+    font-size:14px;
+    text-align:center;
+}
+.footer {
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid white;
+    padding-top:20px;
+    font-size:14px;
+}
+hr {
+    border:1px solid #444;
+    margin:40px 0;
+}
+</style>
+</head>
+<body>
+
+<h1>Book Appointment</h1>
+
+<h3>Studio Rules & Terms</h3>
+<p>
+No alcohol or drugs before appointment.<br>
+Must eat before arriving.<br>
+1 guest only.<br>
+Inform artist if using numbing cream.<br>
+24 hours notice required for changes.
+</p>
+
+<label style="display:block; text-align:center;">
+<input type="checkbox" required> I have read and agree to the studio rules
+</label>
+
+<h3>Health Declaration</h3>
+<label>
+<input type="checkbox" name="health" required> I confirm I have informed the artist of any relevant health conditions
+</label>
+
+<h3>Booking Details</h3>
+
+<form action="https://formspree.io/f/xwvnbgbr" method="POST">
+
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Email Address</label>
+<input type="email" name="email" required>
+
+<label>Date of Birth</label>
+<input type="date" name="dob" required>
+
+<label>I confirm the above is correct</label>
+<input type="checkbox" name="dobConfirm" required>
+
+<label>Preferred Appointment Date</label>
+<input type="date" name="date" required>
+
+<label>Preferred Time</label>
+<select name="preferredTime" required>
+<option>Morning</option>
+<option>Afternoon</option>
+<option>Evening</option>
+</select>
+
+<label>Tattoo Type</label>
+<select name="tattooType" required>
+<option>New Tattoo</option>
+<option>Cover-Up</option>
+<option>Touch-Up</option>
+<option>Other</option>
+</select>
+
+<label>Tattoo Placement</label>
+<input type="text" name="placement" required>
+
+<label>Size</label>
+<select name="size" required>
+<option>Small</option>
+<option>Medium</option>
+<option>Large</option>
+</select>
+
+<label>Colour Preference</label>
+<select name="colour" required>
+<option>Black & Grey</option>
+<option>Colour</option>
+<option>Not Sure</option>
+</select>
+
+<h3>Style Options</h3>
+<div class="style-options">
+<label><input type="checkbox" name="style[]" value="Fine Line"> Fine Line</label>
+<label><input type="checkbox" name="style[]" value="Script / Lettering"> Script / Lettering</label>
+<label><input type="checkbox" name="style[]" value="Custom Designs"> Custom Designs</label>
+<label><input type="checkbox" name="style[]" value="Colour Work"> Colour Work</label>
+<label><input type="checkbox" name="style[]" value="Cover-Ups"> Cover-Ups</label>
+<label><input type="checkbox" name="style[]" value="Large Pieces"> Large Pieces</label>
+<label><input type="checkbox" name="style[]" value="Any Size Accepted"> Any Size Accepted</label>
+</div>
+
+<label>Special Requests / Additional Notes</label>
+<textarea name="notes"></textarea>
+
+<p class="note">
+After we confirm your appointment, please email any reference photos to: <strong>mortonsservices30@gmail.com</strong>
+</p>
+
+<p>
+I understand tattoos are permanent and results may vary depending on skin, placement, and healing.
+</p>
+
+<input type="hidden" name="_subject" value="New Booking Request - Morton's Tattoos">
+<button type="submit">SUBMIT BOOKING REQUEST</button>
+</form>
+
+<!-- Contact Form -->
+<hr>
+<h2 id="contact">Contact Me</h2>
+<form action="https://formspree.io/f/xwvnbgbr" method="POST">
+<label>Name</label>
+<input type="text" name="contactName" required>
+
+<label>Email</label>
+<input type="email" name="contactEmail" required>
+
+<label>Message</label>
+<textarea name="contactMessage" required></textarea>
+
+<input type="hidden" name="_subject" value="Contact Form Submission - Morton's Tattoos">
+<button type="submit">SEND MESSAGE</button>
+</form>
+
+<div class="footer">
+© Morton's Tattoos | Appointment Only
+</div>
+
+</body>
+</html>
